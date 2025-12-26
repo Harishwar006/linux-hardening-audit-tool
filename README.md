@@ -108,9 +108,13 @@ Apply SAFE auto-fixes now? (yes/no)
 Terminal
 
 [*] Starting Linux Hardening Audit...
+
 [+] Initial score: /100
+
 Apply SAFE auto-fixes now? (yes/no): yes
+
 [*] Re-running audit after fixes...
+
 [+] Final score: /100
 
 Generated Files
@@ -124,6 +128,7 @@ hardening_report.html
 🌐 View HTML Report
 
 xdg-open hardening_report.html  (or)
+
 firefox hardening_report.html
 
 ---
@@ -131,8 +136,11 @@ firefox hardening_report.html
 🧪 Auto-Fix Safety Policy
 
 ✔ Only SAFE configurations
+
 ✔ No service removal
+
 ✔ No user deletion
+
 ✔ No destructive commands
 
 Examples:
@@ -147,6 +155,3 @@ Service restart  only when required
 
 
 
----
-
-Just say NEXT 🚀
