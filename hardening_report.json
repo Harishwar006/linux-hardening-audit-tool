@@ -1,0 +1,90 @@
+{
+    "hostname": "kali",
+    "timestamp": "2025-12-26T12:26:06.787705",
+    "hardening_score": 93,
+    "risk_score": 7,
+    "max_risk": 100,
+    "total_checks": 10,
+    "findings": [
+        {
+            "id": "AUTH-001",
+            "title": "Multiple UID 0 users",
+            "severity": "CRITICAL",
+            "status": "PASS",
+            "description": "Only root has UID 0",
+            "fix": "No action required"
+        },
+        {
+            "id": "FS-001",
+            "title": "/etc/shadow permissions",
+            "severity": "HIGH",
+            "status": "PASS",
+            "description": "Permissions are secure",
+            "fix": "No action required"
+        },
+        {
+            "id": "NET-001",
+            "title": "Open listening ports",
+            "severity": "MEDIUM",
+            "status": "PASS",
+            "description": "No open ports found",
+            "fix": "No action required"
+        },
+        {
+            "id": "KERN-001",
+            "title": "ASLR enabled",
+            "severity": "HIGH",
+            "status": "PASS",
+            "description": "ASLR is enabled",
+            "fix": "No action required"
+        },
+        {
+            "id": "SSH-001",
+            "title": "SSH Root Login",
+            "severity": "CRITICAL",
+            "status": "PASS",
+            "description": "Root login via SSH is disabled",
+            "fix": "No action required"
+        },
+        {
+            "id": "SSH-002",
+            "title": "SSH Password Authentication",
+            "severity": "HIGH",
+            "status": "PASS",
+            "description": "Password authentication disabled",
+            "fix": "No action required"
+        },
+        {
+            "id": "SSH-003",
+            "title": "SSH Protocol Version",
+            "severity": "HIGH",
+            "status": "FAIL",
+            "description": "SSH protocol 2 not enforced",
+            "fix": "Set Protocol 2"
+        },
+        {
+            "id": "CIS-SSH-1",
+            "title": "Ensure SSH root login is disabled",
+            "severity": "CRITICAL",
+            "status": "PASS",
+            "description": "Command output: None",
+            "fix": "Set PermitRootLogin no in /etc/ssh/sshd_config"
+        },
+        {
+            "id": "CIS-AUTH-1",
+            "title": "Ensure only root has UID 0",
+            "severity": "CRITICAL",
+            "status": "PASS",
+            "description": "Command output: root",
+            "fix": "Remove extra UID 0 users"
+        },
+        {
+            "id": "CIS-KERNEL-1",
+            "title": "Ensure ASLR is enabled",
+            "severity": "HIGH",
+            "status": "PASS",
+            "description": "Command output: 2",
+            "fix": "Set kernel.randomize_va_space = 2"
+        }
+    ]
+}

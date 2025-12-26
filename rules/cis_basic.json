@@ -1,0 +1,26 @@
+[
+  {
+    "id": "CIS-SSH-1",
+    "title": "Ensure SSH root login is disabled",
+    "severity": "CRITICAL",
+    "check": "grep -Ei '^PermitRootLogin yes' /etc/ssh/sshd_config",
+    "expect": "NOT_PRESENT",
+    "fix": "Set PermitRootLogin no in /etc/ssh/sshd_config"
+  },
+  {
+    "id": "CIS-AUTH-1",
+    "title": "Ensure only root has UID 0",
+    "severity": "CRITICAL",
+    "check": "awk -F: '($3 == 0) {print $1}' /etc/passwd",
+    "expect": "ONLY_root",
+    "fix": "Remove extra UID 0 users"
+  },
+  {
+    "id": "CIS-KERNEL-1",
+    "title": "Ensure ASLR is enabled",
+    "severity": "HIGH",
+    "check": "sysctl -n kernel.randomize_va_space",
+    "expect": "2",
+    "fix": "Set kernel.randomize_va_space = 2"
+  }
+]

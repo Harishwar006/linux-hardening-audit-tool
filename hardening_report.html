@@ -1,0 +1,124 @@
+
+    <html>
+    <head>
+        <title>Linux Hardening Audit Report</title>
+        <style>
+            body { font-family: Arial; margin: 40px; }
+            h1 { color: #2c3e50; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; }
+            th { background-color: #34495e; color: white; }
+            tr:nth-child(even) { background-color: #f2f2f2; }
+        </style>
+    </head>
+    <body>
+        <h1>Linux Hardening Audit Report</h1>
+        <p><b>Hostname:</b> kali</p>
+        <p><b>Date:</b> 2025-12-26 12:26:06</p>
+        <p><b>Hardening Score:</b> 93 / 100</p>
+
+        <h2>Findings</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Remediation</th>
+            </tr>
+            
+        <tr>
+            <td>AUTH-001</td>
+            <td>Multiple UID 0 users</td>
+            <td style="color:red;">CRITICAL</td>
+            <td>PASS</td>
+            <td>Only root has UID 0</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>FS-001</td>
+            <td>/etc/shadow permissions</td>
+            <td style="color:orange;">HIGH</td>
+            <td>PASS</td>
+            <td>Permissions are secure</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>NET-001</td>
+            <td>Open listening ports</td>
+            <td style="color:gold;">MEDIUM</td>
+            <td>PASS</td>
+            <td>No open ports found</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>KERN-001</td>
+            <td>ASLR enabled</td>
+            <td style="color:orange;">HIGH</td>
+            <td>PASS</td>
+            <td>ASLR is enabled</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>SSH-001</td>
+            <td>SSH Root Login</td>
+            <td style="color:red;">CRITICAL</td>
+            <td>PASS</td>
+            <td>Root login via SSH is disabled</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>SSH-002</td>
+            <td>SSH Password Authentication</td>
+            <td style="color:orange;">HIGH</td>
+            <td>PASS</td>
+            <td>Password authentication disabled</td>
+            <td>No action required</td>
+        </tr>
+        
+        <tr>
+            <td>SSH-003</td>
+            <td>SSH Protocol Version</td>
+            <td style="color:orange;">HIGH</td>
+            <td>FAIL</td>
+            <td>SSH protocol 2 not enforced</td>
+            <td>Set Protocol 2</td>
+        </tr>
+        
+        <tr>
+            <td>CIS-SSH-1</td>
+            <td>Ensure SSH root login is disabled</td>
+            <td style="color:red;">CRITICAL</td>
+            <td>PASS</td>
+            <td>Command output: None</td>
+            <td>Set PermitRootLogin no in /etc/ssh/sshd_config</td>
+        </tr>
+        
+        <tr>
+            <td>CIS-AUTH-1</td>
+            <td>Ensure only root has UID 0</td>
+            <td style="color:red;">CRITICAL</td>
+            <td>PASS</td>
+            <td>Command output: root</td>
+            <td>Remove extra UID 0 users</td>
+        </tr>
+        
+        <tr>
+            <td>CIS-KERNEL-1</td>
+            <td>Ensure ASLR is enabled</td>
+            <td style="color:orange;">HIGH</td>
+            <td>PASS</td>
+            <td>Command output: 2</td>
+            <td>Set kernel.randomize_va_space = 2</td>
+        </tr>
+        
+        </table>
+    </body>
+    </html>
+    
