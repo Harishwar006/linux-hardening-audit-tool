@@ -33,14 +33,23 @@ HTML report (human-friendly)
 
 linux-audit-tool/
 │
+
 ├── audit.py                  # Main audit engine
+
 ├── hardening_report.json     # JSON output (auto-generated)
+
 ├── hardening_report.html     # HTML output (auto-generated)
+
 │
+
 ├── reports/
+
 │   ├── __init__.py
+
 │   └── report_html.py        # HTML report generator
+
 │
+
 └── README.md
 
 ---
@@ -69,7 +78,9 @@ UFW (for firewall checks)
 ▶️ How to Run
 
 git clone https://github.com/yourusername/linux-hardening-audit-tool.git
+
 cd linux-hardening-audit-tool
+
 sudo python3 audit.py
 
 ---
