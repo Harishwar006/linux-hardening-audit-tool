@@ -59,6 +59,7 @@ linux-audit-tool/
 ID	Check Description	Severity
 
 SSH-01	Disable SSH root login	HIGH
+
 FW-01	Firewall enabled (UFW)	MEDIUM
 
 ---
