@@ -4,23 +4,39 @@ A lightweight, automated Linux security hardening audit tool that checks system 
 Designed for learning, security auditing, and blue-team practice on Linux systems (Kali, Ubuntu, Debian).
 --------------------------------
 🚀 Features
+
 ✅ Security hardening checks (SSH, Firewall, etc.)
+
 🔧 Optional SAFE auto-fix during audit
+
 🔁 Re-runs audit after fixes to verify effectiveness
+
 📊 Security score calculation (0–100)
+
 📄 Generates:
+
 JSON report (machine-readable)
+
 HTML report (human-friendly)
+
 🧩 Modular & extensible architecture
+
 🛡️ Root privilege validation (safe execution)
+
 --------------------------------
+
 📁 Project Structure
+
 Copy code
 
 linux-audit-tool/
+
 │
+
 ├── audit.py                  # Main audit engine
+
 ├── hardening_report.json     # JSON output (auto-generated)
+
 ├── hardening_report.html     # HTML output (auto-generated)
 │
 ├── reports/
